@@ -1,3 +1,3 @@
 # dockerninja
 test del ejemplo del peladoneard
-y comienzos de cicleci
+y comienzos de cicleci y a ver...

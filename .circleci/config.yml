@@ -5,9 +5,9 @@ jobs:
     steps:
      - add_ssh_key
          fingerprints:
-           -"24:7e:e5:e1:15:e7:98:70:5d:70:54:ff:1a:67:47:89"
+           -"c5:a4:0e:6f:39:cc:5d:8e:d4:f0:33:f2:12:c7:dc:67"
      - checkout
      - run: docker login -u $DOCKER_USER -P $DOCKER_PASS
-     - run: docker build -t cabrecrieuro/dockerninja:$CIRCLE_SHA1 .
-     - run: docker push cabrecrieuro/dockerninja:$CIRCLE_SH1
-     - run: ssh -o StrinctHostKeyChecking=no cabrecrigmail.com "/bin/bash /root/docker/deploy.sh $CIRCLE_SH1
+     - run: docker build -t cabrecri/dockerninja:$CIRCLE_SHA1 .
+     - run: docker push cabrecri/dockerninja:$CIRCLE_SH1
+     - run: ssh -o StrinctHostKeyChecking=no cabrecri@outlock.com "/bin/bash /root/docker/deploy.sh $CIRCLE_SH1

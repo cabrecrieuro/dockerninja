@@ -5,7 +5,7 @@ jobs:
   build:
     machine: true
     steps:
-        - add_ssh_keys 
+        - add_ssh_keys: 
             fingerprints:
                 - "c5:a4:0e:6f:39:cc:5d:8e:d4:f0:33:f2:12:c7:dc:67"
         - checkout

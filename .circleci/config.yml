@@ -13,5 +13,3 @@ jobs:
         - run: docker build -t cabrecri/dockerninja:$CIRCLE_SHA1 .
         - run: docker push cabrecri/dockerninja:$CIRCLE_SH1
         - run: ssh -o StrinctHostKeyChecking=no cabrecri@outlock.com "/bin/bash /root/docker/deploy.sh $CIRCLE_SH1
-            	
-      	

@@ -10,6 +10,6 @@ jobs:
                 - "c5:a4:0e:6f:39:cc:5d:8e:d4:f0:33:f2:12:c7:dc:67"
         - checkout
         - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
-        - run: docker build -t cabrecri/dockerninja:34 .
-        - run: docker push cabrecri/dockerninja:34
-        - run: ssh -o StrinctHostKeyChecking=no root@174.138.48.50 "/bin/bash /root/docker/deploy.sh $CIRCLE_SH1
+        - run: docker build -t cabrecri/dockerninja:${CIRCLE_SHA1}'.
+        - run: docker push cabrecri/dockerninja:${CIRCLE_SHA1}'
+       # - run: ssh -o StrinctHostKeyChecking=no root@174.138.48.50 "/bin/bash /root/docker/deploy.sh $CIRCLE_SH1

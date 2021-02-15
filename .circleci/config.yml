@@ -4,8 +4,7 @@ jobs:
     machine: true
     steps:
      - add_ssh_key
-         fingerprints:
-           -"c5:a4:0e:6f:39:cc:5d:8e:d4:f0:33:f2:12:c7:dc:67"
+	fingerprints: "c5:a4:0e:6f:39:cc:5d:8e:d4:f0:33:f2:12:c7:dc:67"
      - checkout
      - run: docker login -u $DOCKER_USER -P $DOCKER_PASS
      - run: docker build -t cabrecri/dockerninja:$CIRCLE_SHA1 .
